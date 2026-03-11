@@ -1,110 +1,110 @@
-# 🎬 Real-World Data Wrangling: Netflix & Global GDP Analysis
+# 🎬 Análise de Dados Reais: Netflix e PIB Mundial
 
-This project applies real-world data wrangling techniques to gather, clean, and analyze two datasets — one about **Netflix Movies and TV Shows** and another about **Global GDP** from the World Bank API.  
-The main goal is to explore the relationship between a country's **economic power** (GDP) and its **media production** level.
-
----
-
-## 📊 Project Overview
-
-In this project, I applied the skills acquired in data wrangling to:
-- Retrieve and extract data using different methods (manual download and API access).
-- Assess and clean the data programmatically.
-- Store and merge datasets for further analysis.
-- Visualize and interpret correlations using Python.
+Este projeto aplica técnicas de **tratamento de dados (data wrangling)** para reunir, limpar e analisar dois conjuntos de dados — um sobre **filmes e séries da Netflix** e outro sobre o **PIB mundial**, obtido por meio da API do Banco Mundial.  
+O objetivo principal é investigar a relação entre o **poder econômico de um país (PIB)** e o **nível de produção audiovisual** presente na plataforma.
 
 ---
 
-## 📁 Datasets
+## 📊 Visão Geral do Projeto
 
-### Dataset 1 — Netflix Titles
-- **Type:** CSV File (manually downloaded from Kaggle)
-- **Description:** Contains details about Netflix movies and TV shows.
-- **Variables:**
-  - `type`: Movie or TV Show  
-  - `title`: Title of the production  
-  - `director`: Director's name  
-  - `cast`: List of actors  
-  - `country`: Country of origin  
-  - `release_year`: Year of release  
-  - `rating`: Age rating  
-  - `duration`: Duration (minutes or seasons)  
-
-📈 This dataset allows exploration of media production patterns by country.
+Neste projeto, apliquei as habilidades adquiridas em tratamento de dados para:
+- Coletar e extrair dados de diferentes fontes (download manual e API).
+- Avaliar e limpar os dados de forma programática.
+- Armazenar e combinar diferentes bases.
+- Visualizar e interpretar correlações com Python.
 
 ---
 
-### Dataset 2 — Global GDP
-- **Type:** JSON data from **World Bank API**
-- **Method:** Data retrieved programmatically using the World Bank’s open API.  
-- **Variables:**
-  - `Country`: Name of the country  
-  - `Year`: Year of observation  
-  - `GDP (US$)`: Total GDP in current US dollars  
+## 📁 Conjuntos de Dados
 
-🌍 This dataset provides economic context to compare with the Netflix data.
+### Conjunto 1 — Netflix Titles
+- **Tipo:** Arquivo CSV (baixado manualmente do Kaggle)  
+- **Descrição:** Contém informações sobre filmes e séries disponíveis na Netflix.  
+- **Principais variáveis:**
+  - `type`: Filme ou Série  
+  - `title`: Título da produção  
+  - `director`: Nome do diretor  
+  - `cast`: Lista de atores  
+  - `country`: País de origem  
+  - `release_year`: Ano de lançamento  
+  - `rating`: Classificação indicativa  
+  - `duration`: Duração (em minutos ou temporadas)  
 
----
-
-## 🧠 Research Question
-
-> Is there a relationship between a country's GDP and its media production (number of Netflix titles)?
-
----
-
-## ⚙️ Steps & Methods
-
-1. **Data Gathering**
-   - Netflix data manually downloaded from Kaggle.
-   - GDP data collected using the World Bank API via `requests`.
-
-2. **Data Assessment**
-   - Checked data completeness, column consistency, and missing values.
-   - Verified each dataset had >500 samples and at least 2 variables.
-
-3. **Data Cleaning**
-   - Standardized column names and country identifiers.
-   - Removed nulls and irrelevant records.
-
-4. **Data Merging**
-   - Combined datasets by matching countries.
-   - Counted the number of Netflix titles per country and merged with GDP data.
-
-5. **Data Analysis**
-   - Computed the correlation between GDP and number of titles.
-   - Visualized results using **Seaborn heatmaps**.
+📈 Este conjunto permite analisar padrões de produção audiovisual por país.
 
 ---
 
-## 📉 Visualization Example
+### Conjunto 2 — PIB Mundial
+- **Tipo:** Dados em JSON obtidos via **API do Banco Mundial**  
+- **Método:** Extração automatizada por requisição HTTP.  
+- **Principais variáveis:**
+  - `country`: Nome do país  
+  - `year`: Ano de observação  
+  - `gdp (US$)`: PIB total em dólares correntes  
 
-The correlation between GDP and film production was visualized using a **heatmap**:
-
-![Correlation Heatmap](https://img.shields.io/badge/Seaborn-Heatmap-blue?logo=python&style=flat-square)
-
-> The heat map shows a positive correlation between GDP and media production.  
-> Countries with higher GDP tend to produce (or appear in) more Netflix titles.
-
----
-
-## 🧩 Technologies Used
-
-| Category | Libraries / Tools |
-|-----------|------------------|
-| Data manipulation | `pandas`, `numpy` |
-| Data visualization | `matplotlib`, `seaborn` |
-| Data retrieval | `requests`, `BeautifulSoup` |
-| Machine learning (optional) | `scikit-learn` |
-| Database interaction | `SQLAlchemy` |
-| Image handling | `Pillow` |
+🌍 Este conjunto fornece o contexto econômico necessário para comparação com os dados da Netflix.
 
 ---
 
-## 🧪 How to Run
+## 🧠 Pergunta de Pesquisa
+
+> Existe relação entre o PIB de um país e a quantidade de produções da Netflix associadas a ele?
+
+---
+
+## ⚙️ Etapas e Métodos
+
+1. **Coleta de Dados**
+   - Dados da Netflix baixados manualmente do Kaggle.  
+   - Dados de PIB obtidos via API do Banco Mundial com `requests`.
+
+2. **Avaliação dos Dados**
+   - Verificação de completude, consistência e valores ausentes.  
+   - Garantia de que cada base possuía mais de 500 observações e pelo menos 2 variáveis.
+
+3. **Limpeza dos Dados**
+   - Padronização de nomes de colunas e países.  
+   - Remoção de valores nulos e registros irrelevantes.
+
+4. **Junção dos Dados**
+   - Combinação das bases por país.  
+   - Contagem de títulos da Netflix por país e cruzamento com o PIB.
+
+5. **Análise e Visualização**
+   - Cálculo de correlação entre PIB e número de títulos.  
+   - Criação de **heatmaps** com a biblioteca **Seaborn**.
+
+---
+
+## 📉 Exemplo de Visualização
+
+A correlação entre PIB e número de produções foi visualizada em um **heatmap**:
+
+![Heatmap](https://img.shields.io/badge/Seaborn-Heatmap-blue?logo=python&style=flat-square)
+
+> O mapa de calor mostra uma **correlação positiva** entre PIB e produção audiovisual.  
+> Países com PIB mais elevado tendem a ter mais títulos na Netflix.
+
+---
+
+## 🧩 Tecnologias Utilizadas
+
+| Categoria | Bibliotecas / Ferramentas |
+|-----------|---------------------------|
+| Manipulação de dados | `pandas`, `numpy` |
+| Visualização de dados | `matplotlib`, `seaborn` |
+| Coleta de dados | `requests`, `BeautifulSoup` |
+| Modelagem / Machine Learning (opcional) | `scikit-learn` |
+| Integração com banco de dados | `SQLAlchemy` |
+| Processamento de imagens | `Pillow` |
+
+---
+
+## 🧪 Como Executar o Projeto
 
 ```bash
-# 1. Install dependencies
+# 1. Instale as dependências
 pip install numpy pandas matplotlib requests seaborn scikit-learn SQLAlchemy beautifulsoup4 pillow openpyxl
 
-# 2. Run the notebook
+# 2. Execute o notebook
 jupyter notebook data_wrangling_project.ipynb

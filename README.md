@@ -76,17 +76,6 @@ Neste projeto, apliquei as habilidades adquiridas em tratamento de dados para:
 
 ---
 
-## 📉 Exemplo de Visualização
-
-A correlação entre PIB e número de produções foi visualizada em um **heatmap**:
-
-![Heatmap](https://img.shields.io/badge/Seaborn-Heatmap-blue?logo=python&style=flat-square)
-
-> O mapa de calor mostra uma **correlação positiva** entre PIB e produção audiovisual.  
-> Países com PIB mais elevado tendem a ter mais títulos na Netflix.
-
----
-
 ## 🧩 Tecnologias Utilizadas
 
 | Categoria | Bibliotecas / Ferramentas |
